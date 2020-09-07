@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>SB Admin - Start Bootstrap Template</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Toastr -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"
+    ></script>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet" />
+  </head>
+
+  <body class="register-main bg-dark">
+    <div class="container">
+      <div class="card card-register mx-auto mt-2">
+        <div class="card-header">Register an Account</div>
+        <div class="card-body">
+          <form
+            onsubmit="register_user(event)"
+            name="register-form"
+            method="post"
+            enctype="multipart/form-data"
+            id="register-form"
+          >
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input
+                class="form-control"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                name="email"
+                aria-describedby="emailHelp"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    class="form-control"
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="exampleConfirmPassword">Confirm Password</label>
+                  <input
+                    class="form-control"
+                    id="confirm_password"
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="Confirm password"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Office Address</label>
+              <input
+                class="form-control"
+                id="address"
+                name="office_address"
+                type="text"
+                placeholder="Enter your office address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Phone Number</label>
+              <input
+                class="form-control"
+                id="phone"
+                name="phone_number"
+                type="text"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Profile Picture</label>
+              <input
+                class="form-control"
+                id="profile_picture"
+                name="profile_picture"
+                type="file"
+              />
+            </div>
+
+            <button
+              type="submit"
+              name="register"
+              id="register"
+              class="btn btn-block reg-btn"
+            >
+              Register
+            </button>
+          </form>
+          <div class="text-center">
+            <a class="d-block small mt-3" href="login.html">Login Page</a>
+            <a class="d-block small" href="forgot-password.html"
+              >Forgot Password?</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>
