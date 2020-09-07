@@ -1,4 +1,9 @@
 const BASE_URL = "https://find-a-house-rails-api.herokuapp.com/api/v1";
+const token = localStorage.getItem("token");
+
+if (token) {
+  window.location.href = "index.html";
+}
 
 /** Register User */
 const register_user = async (event) => {
