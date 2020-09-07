@@ -14,7 +14,7 @@ const add_listing = async (event) => {
   bodyFormData.append("property_type", formData.get("property_type"));
   bodyFormData.append("size", formData.get("size"));
   bodyFormData.append("location", formData.get("location").toLowerCase());
-  bodyFormData.append("property_images[]", formData.get("property_images"));
+  bodyFormData.append("property_images[]", formData.get("property_images[]"));
   try {
     const response = await axios({
       method: "post",
