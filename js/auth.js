@@ -13,7 +13,7 @@ const register_user = async (event) => {
 
   let bodyFormData = new FormData();
   bodyFormData.append("name", formData.get("name"));
-  bodyFormData.append("email", formData.get("email"));
+  bodyFormData.append("email", formData.get("email").toLowerCase());
   bodyFormData.append("password", formData.get("password"));
   bodyFormData.append(
     "password_confirmation",
@@ -31,10 +31,10 @@ const register_user = async (event) => {
     });
     console.log(response.data);
 
-    toastr.success(response.data.message, { timeOut: 5000 });
+    toastr.success(response.data.message, { timeOut: 3000 });
     setTimeout(function () {
       window.location.href = "login.html";
-    }, 5000);
+    }, 3000);
   } catch (error) {
     console.log("ERROR: ", error.response.data.errors);
     toastr.error("Please fill all fields");
@@ -48,7 +48,7 @@ const login_user = async (event) => {
   const formData = new FormData(loginForm);
 
   let bodyFormData = new FormData();
-  bodyFormData.append("email", formData.get("email"));
+  bodyFormData.append("email", formData.get("email").toLowerCase());
   bodyFormData.append("password", formData.get("password"));
 
   try {
